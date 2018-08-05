@@ -11,6 +11,8 @@ import junitparams.Parameters;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.*;
 
+import static com.codemanship.marsrover.TestUtils.*;
+
 @RunWith(JUnitParamsRunner.class)
 public class RoverTests {
 
@@ -73,14 +75,6 @@ public class RoverTests {
 		assertThat(location(response )[X], is(3));
 		assertThat(location(response )[Y], is(1));
 		assertThat(direction(response), is("E"));
-	}
-	
-	private Object direction(Object[][] response) {
-		return response [1][0];
-	}
-	
-	private Object[] location(Object[][] response) {
-		return response [0];
 	}
 
 }
